@@ -1,6 +1,59 @@
-<html>
-    <h2 style="text-align: center;">Together in Covid</h2>
-<p><img src="https://www.unodc.org/images/middleeastandnorthafrica//2020/COVID-19/quote_card_rectangle_option_2.png" alt="" width="600" height="300" /></p>
-<p style="font-size: 1.5em;">&nbsp;</p>
-<p>Help by signing up with phone number and category you can help with</p>
+{% load static %}
+<!doctype html>
+  
+    <head>
+      <meta charset="utf-8">
+      <title>Home</title>
+      <base href="/">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" type="image/x-icon" href={% static "assets/favicon.ico" %}>
+      <link rel="stylesheet" href={% static "css/styles.css" %}>
+          <!-- index.html -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+    <img style="display: block; margin-left: auto; margin-right: auto;" src={% static "assets/covid-community.jpg" %}>
+    <h2 style="text-align: center;">TOGETHER IN COVID</h2>
+    <p style="font-size: 1.5em; text-align: center;">&nbsp;</p>
+    <p style="text-align: center;">Help by signing up with phone number and category you can help with</p>
+    <div>
+        <form action="/thanks/" method="post" style="text-align: center;" >
+        <!-- method="POST"> -->
+        {% csrf_token %} 
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your Name" maxlength="100" required>
+         <br>
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your Last Name">
+          <br>
+          <label for="phonenumber">Phone Num</label>
+          <input type="text" id="lname" name="phone" placeholder="Your Phone Number" maxlength="20" required>
+          <br>
+          <br>
+          <label for="country">Country</label>
+          <select id="country" name="country" required>
+            <option value="australia">India</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+       &nbsp &nbsp &nbsp
+          <label for="category">Help Category</label>
+          <select id="category" name="category" required>
+            <option value="food">Food</option>
+            <option value="medical_supplies">Medical Supplies</option>
+            <option value="masks">Masks</option>
+          </select>
+          <br>
+          <input type="submit" value="Submit">
+        </form>
+    </div>
+    <p style="text-align: center;"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://www.unodc.org/images/middleeastandnorthafrica//2020/COVID-19/quote_card_rectangle_option_2.png" alt="" width="600" height="300" /></p>
+    
+
+
+  
+
+
+</body>
+    
 </html>

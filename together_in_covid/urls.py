@@ -22,5 +22,7 @@ from first import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', views.HomePageView.as_view()),
-    url(r'^links/$' , views.LinksPageView.as_view()),
+    url(r'^thanks/$' , views.ThanksPageView.getthanks),
+    url(r'^getvolunteers/$',views.Volunteers.getVolunteers),
+   
 ]
