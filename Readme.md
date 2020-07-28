@@ -2,7 +2,7 @@
 
 Django based web-app to accept donations/relief material for covid affected people in the neighboring communities.
 
-## #Technical details:
+## Technical details:
 Integration with [Twilio](https://www.twilio.com/) API to verify phone numbers and broadcast further details.
 You may buy custom phone numbers from thousands of options, locally registered at different locations round the world.
 
